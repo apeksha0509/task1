@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<html> 
+<head> 
+<script> 
+function Myfun()								 
+{ 
+	var name = document.forms["RegForm"]["Name"];			 
+	var email = document.forms["RegForm"]["EMail"]; 
+	var phone = document.forms["RegForm"]["Telephone"];  
+	var password = document.forms["RegForm"]["Password"]; 
+	var lastname = document.forms["RegForm"]["LastName"]; 
+
+	if (name.value == "")								 
+	{ 
+		window.alert("Please enter your name."); 
+		name.focus(); 
+		return false; 
+	} 
+
+	if (lastname.value == "")							 
+	{ 
+		window.alert("Please enter your lastname."); 
+		address.focus(); 
+		return false; 
+	} 
+	
+	if (email.value == "")								 
+	{ 
+		window.alert("Please enter a valid e-mail address."); 
+		email.focus(); 
+		return false; 
+	} 
+
+	if (phone.value == "")						 
+	{ 
+		window.alert("Please enter your telephone number."); 
+		phone.focus(); 
+		return false; 
+	} 
+
+	if (password.value == "")					 
+	{ 
+		window.alert("Please enter your password"); 
+		password.focus(); 
+		return false; 
+	} 
+
+}
+</script> 
+
+<style type="text/css"> 
+ 
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+
+	h1{
+		text-align: center;
+		padding: 20px;
+	}
+	h1:hover{
+		color:red;
+		
+	}
+	h2{
+		text-align: center;
+		padding: 20px;
+	}
+	h2:hover{
+		color: red;
+		
+	}
+	.register{
+		background:#b0c3d1 ; 
+		    box-sizing: border-box; 
+		    width:50%; 
+		    border: 10px solid black; 
+		    float: left; 
+		    align-content: center; 
+		    align-items: center; 
+		    margin-left: 255px;
+		} 
+		   
+		form {                                         
+		    margin: 0 auto; 
+		    width: 600px; 
+
+	}
+	#register{
+		margin-left:25px;                                        
+		
+
+	}
+	input{
+		color: black;
+		font-family: sans-serif;
+		font-size: 18px;
+		font-style: italic;
+	}
+	#name{
+		width: 300px;
+		border: none;
+		border-radius: 3px;
+		outline:0;
+		padding: 7px;
+	}
+	#ph{
+		width: 65px;
+		padding: 7px;
+		border: none;
+		border-radius: 3px;
+		outline: 0;
+	}
+	#num{
+		width: 230px;
+		padding: 7px;
+		border: none;
+		border-radius: 3px;
+		outline: 0;
+	}
+	#sub{
+		width: 100px;
+		padding: 7px;
+		font-size: 16px;
+		font-family: sans-serif;
+		font-style: italic;
+		font-weight: 600px;
+		border: none;
+		border-radius: 3px;
+		margin-left: 150px;
+		color: black;
+
+	}
+	#sub{
+		width: 50px;
+		padding: 7px;
+		font-size: 16px;
+		font-family: sans-serif;
+		font-style: italic;
+		font-weight: 600px;
+		border: none;
+		border-radius: 3px;
+		margin-left: 100px;
+		color: black;
+
+	}
+	
+	body{
+		background:#265dde;
+
+	}
+}</style>
+</head> 
+
+<body> 
+<h1 style="text-align: center"> REGISTRATION FORM </h1>		 
+<div class="register">
+
+<form id="register"name="RegForm" action="/submit.php" onsubmit="return Myfun()" method="post"> 
+	<h2>Register here</h2>
+	
+	<p>Name: <input type="text" size=65 name="Name"> </p>	 
+	<p> LastName: <input type="text" size=65 name="Address"> </p><br> 
+	<p>E-mail Address: <input type="text" size=65 name="EMail"> </p><br> 
+	<p>Password: <input type="text" size=65 name="Password"> </p><br> 
+	<p>Telephone: <input type="text" size=65 name="Telephone"> </p><br> 	
+	<p>Comments: <textarea cols="55" name="Comment"> </textarea></p> 
+	<p><input type="submit" value="send" name="Submit" id="sub">	 
+		<input type="reset" value="Reset" name="Reset" id="resub"> 
+	</p>		 
+</form> 
+</div>
+</body> 
+</html> 
